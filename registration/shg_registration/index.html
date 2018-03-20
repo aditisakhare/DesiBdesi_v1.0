@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="vendor/jquery.min.js"></script>
+		<script src="js/shg_registration.js"></script>
+	</head>
+	<body>
+		<form id="multiphase" onsubmit="return false" style="display: block">
+			<div id="phase1">
+				<div>
+					<label for="shg_name">SHG Name</label>
+					<input type="text" name="shg_name" id="shg_name">
+				</div>
+				<div>
+					<label for="member_count">No. of Members</label>
+					<input type="number" name="member_count" id="member_count">
+				</div>
+				<div>
+					<label for="leader">Leader</label>
+					<input type="text" name="leader" id="leader">
+				</div>
+				<div>
+					<label for="contact">Contact No.</label>
+					<input type="number" name="contact" id="contact">
+				</div>
+				<div>
+					<label for="aadhar">Aadhaar card</label>
+					<input type="number" name="aadhar" id="aadhar">
+				</div>
+				<div>
+					<label for="address">Address</label>
+					<input type="text" name="address" id="address">
+				</div>
+				<div>
+					<label for="city">City</label>
+					<input type="text" name="city" id="city">
+				</div>
+				<div>
+					<label for="city">District</label>
+					<input type="text" name="district" id="district">
+				</div>				
+				<div>
+					<label for="state">State</label>
+					<input type="text" name="state" id="state">
+				</div>
+				<div>
+					<label for="zipcode">Zip Code</label>
+					<input type="text" name="zipcode" id="zipcode">
+				</div>
+				<div>
+					<label for="product">Product of your choice</label>
+					<input type="text" name="product" id="product">
+				</div>
+				<button onclick="processPhase1()">Next -></button>				
+			</div>
+			<div id="phase2" style="display: none">
+			</div>
+			<div id="phase3" style="display: none">
+				SHG Name: <span id="display_shg_name"></span><br>
+				No. of Members: <span id="display_member_count"></span><br>
+				Leader Name: <span id="display_leader_name"></span><br>
+				Contact No.: <span id="display_contact_no"></span><br>
+				Aadhar Card: <span id="display_aadhar_card"></span><br>
+				Address: <span id="display_address"></span><br>
+				City: <span id="display_city"></span><br>
+				District: <span id="display_district"></span><br>
+				State: <span id="display_state"></span><br>
+				Zipcode: <span id="display_zipcode"></span><br>
+				Product: <span id="display_product"></span><br>
+
+				TEAM MEMBERS :
+				<div id="team">
+					
+				</div>
+				<button onclick="submitForm()">Submit Data</button>
+			</div>
+		</form>
+	</body>
+</html>

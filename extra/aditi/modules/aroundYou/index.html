@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Google Maps Multiple Markers</title> 
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyC1g7uL2wCfpFPW-6k0geeTm_5efhf_bbw" 
+          type="text/javascript"></script>
+</head> 
+<body>
+  <div id="map" style="width: 500px; height: 400px;"></div>
+
+  <script type="text/javascript">
+    var locations = [
+      ['LED India 2017', 15.2993, 74.1240, 4],
+      ['RENEWABLE ASIA 2017', 19.7515, 75.7139, 5],
+      ['EXPO 2017', 18.5204, 73.8567, 3],
+      ['Power Purchase Agreement', 9.9312, 76.2673, 2],
+      ['Udhyog 2017', 10.0889, 77.0595, 1]
+    ];
+
+    var locations1 = [
+      ['LED India 2017', 22.9716, 77.5946, 4],
+      ['RENEWABLE ASIA 2017', 25.076, 72.8777, 5],
+      ['EXPO 2017', 50.5204, 73.8567, 3],
+      ['Power Purchase Agreement', 9.9312, 76.2673, 2],
+      ['Udhyog 2017', 36.0889, 77.0595, 1]
+    ];    
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: new google.maps.LatLng(21.146633, 79.088860),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon: "candle.jpg"
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+
+    for (i = 0; i < locations1.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations1[i][1], locations1[i][2]),
+        map: map,
+        icon: "pickle.png"
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }    
+  </script>
+</body>
+</html>

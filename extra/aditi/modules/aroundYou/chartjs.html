@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Around You</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body style="background-color: white">
+    <div class="container body">
+      <div class="main_container">
+        
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+            </div>
+              <br>
+            
+<div class="row"> <div class="col-md-3 col-sm-9 col-xs-3"></div>
+    <div class="col-md-3 col-sm-9 col-xs-3"><h3 style="color: white"> Statistics about SHGs </h3></div>
+    <div class="col-md-3 col-sm-9 col-xs-3"></div>
+</div>
+         <br>
+
+           
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>SHG Formations and Promotions <small> Total ( in Raigad ) </small></h2>
+                      
+                      <ul class="nav navbar-right panel_toolbox">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><label>Select District :</label><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Raigad</a>
+                          </li>
+                          <li><a href="#">Panvel</a>
+                          </li>
+                            <li><a href="#">Thane</a>
+                          </li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <canvas id="mybarChart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> SHG Productions <small> in Raigad</small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><label>Select District :</label><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Raigad</a>
+                          </li>
+                          <li><a href="#">Panvel</a>
+                          </li>
+                            <li><a href="#">Thane</a>
+                          </li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <canvas id="canvasDoughnut"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="clearfix"></div>
+          <div class="row">
+            
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Demand of Products <small> in Raigad </small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><label>Select District :</label><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Raigad</a>
+                          </li>
+                          <li><a href="#">Panvel</a>
+                          </li>
+                            <li><a href="#">Thane</a>
+                          </li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <canvas id="pieChart"></canvas>
+                  </div>
+                </div>
+              </div>
+         
+         
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2> Products manufactured by SHGs <small> in Raigad </small></h2>
+                     <ul class="nav navbar-right panel_toolbox">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><label>Select District :</label><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Raigad</a>
+                          </li>
+                          <li><a href="#">Panvel</a>
+                          </li>
+                            <li><a href="#">Thane</a>
+                          </li>
+                        </ul>
+                      </li>
+                      
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <canvas id="polarArea"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+        <!-- page content -->
+
+              </div>
+  
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="vendors/Chart.js/dist/Chart.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+	
+  </body>
+</html>
